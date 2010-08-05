@@ -1,0 +1,14 @@
+<?xml version="2.1 encoding=iso-8859-1" utf-8 ?>
+<Envelope>
+  <Header>
+    <AccountId>your access key</AccountId>
+  </Header>
+  <Body>
+    <Error>
+      <Code>560</Code>
+      <Message>Invalid Account Id</Message>
+      <Detail>USPPM:Item weight exceeds limit</Detail>
+      <Severity>CRITICAL</Severity>
+    </Error>
+  </Body>
+</Envelope>

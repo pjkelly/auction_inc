@@ -1,0 +1,62 @@
+<?xml version="2.1" encoding="utf-8" ?>
+<Envelope>
+  <Header>
+    <Date>2008-10-28 19:53:14 GMT</Date>
+  </Header>
+  <Body>
+    <ItemShipRate>
+      <Currency>USD</Currency>
+      <ShipRateList>
+        <ShipRate>
+          <Valid>true</Valid>
+          <CarrierCode>USPS</CarrierCode>
+          <ServiceCode>USPPM</ServiceCode>
+          <ServiceName>USPS Priority Mail</ServiceName>
+          <CalcMethod>C</CalcMethod>
+          <Rate>11.50</Rate>
+          <CarrierRate>9.80</CarrierRate>
+          <Surcharges>0.00</Surcharges>
+          <FuelSurcharges>0.00</FuelSurcharges>
+          <HandlingFees>0.00</HandlingFees>
+          <DeclaredValue>19.95</DeclaredValue>
+          <InsuranceCharges>1.70</InsuranceCharges>
+          <Weight>10.00</Weight>
+          <PackageCount>1</PackageCount>
+          <FlatRateCode>FRB1</FlatRateCode>
+        </ShipRate>
+        <ShipRate>
+          <Valid>true</Valid>
+          <CarrierCode>UPS</CarrierCode>
+          <ServiceCode>UPSGND</ServiceCode>
+          <ServiceName>UPS Ground</ServiceName>
+          <CalcMethod>C</CalcMethod>
+          <Rate>11.30</Rate>
+          <CarrierRate>10.81</CarrierRate>
+          <Surcharges>0.00</Surcharges>
+          <FuelSurcharges>0.49</FuelSurcharges>
+          <HandlingFees>0.00</HandlingFees>
+          <DeclaredValue>19.95</DeclaredValue>
+          <InsuranceCharges>0.00</InsuranceCharges>
+          <Weight>10.00</Weight>
+          <PackageCount>1</PackageCount>
+        </ShipRate>
+        <ShipRate>
+          <Valid>true</Valid>
+          <CarrierCode>UPS</CarrierCode>
+          <ServiceCode>UPS2ND</ServiceCode>
+          <ServiceName>UPS 2 Day</ServiceName>
+          <CalcMethod>C</CalcMethod>
+          <Rate>27.47</Rate>
+          <CarrierRate>24.20</CarrierRate>
+          <Surcharges>0.00</Surcharges>
+          <FuelSurcharges>3.27</FuelSurcharges>
+          <HandlingFees>0.00</HandlingFees>
+          <DeclaredValue>19.95</DeclaredValue>
+          <InsuranceCharges>1.70</InsuranceCharges>
+          <Weight>10.00</Weight>
+          <PackageCount>1</PackageCount>
+        </ShipRate>
+      </ShipRateList>
+    </ItemShipRate>
+  </Body>
+</Envelope>

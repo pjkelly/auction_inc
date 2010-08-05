@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Envelope>
+  <Header>
+    <Date>2010-07-23 19:44:33 GMT.</Date>
+  </Header>
+  <Body>
+    <Time>
+      <Value>2010-07-23 15:44:33 EDT</Value>
+    </Time>
+  </Body>
+</Envelope>

@@ -21,6 +21,7 @@ require 'auction_inc/shipping/node/calc_method'
 require 'auction_inc/shipping/node/item'
 require 'auction_inc/shipping/node/carrier'
 require 'auction_inc/shipping/node/get_item_ship_rate_xs'
+require 'auction_inc/shipping/node/item_ship_rate'
 require 'auction_inc/shipping/node/body'
 require 'auction_inc/shipping/node/envelope'
 

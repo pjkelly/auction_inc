@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe AuctionInc::Shipping::Base do
-
   before(:each) do
     AuctionInc::Shipping::Base.license_key = nil
   end
@@ -52,11 +51,15 @@ describe AuctionInc::Shipping::Base do
 
   describe ".services" do
     it "should return an array of all services" do
-      AuctionInc::Shipping::Base.services.should == AuctionInc::Shipping::Base.carriers.collect { |carrier| carrier.service_list }.flatten
+      AuctionInc::Shipping::Base.services.should == AuctionInc::Shipping::Base.carriers.collect { |carrier| carrier.services }.flatten
     end
   end
 
   describe "#make_request" do
+    before do
+      FakeWeb.register_uri(:post, %r|api\.auctioninc\.com/|, :body => remote_fixture_file('auction_inc_get_time_response.xml'))
+    end
+
     context "when no license key is present" do
       it "should raise a license error" do
         lambda {
@@ -66,12 +69,27 @@ describe AuctionInc::Shipping::Base do
     end
 
     context "when a license key is present" do
-      it "return set the response" do
+      before do
         AuctionInc::Shipping::Base.license_key = '123'
-        service = AuctionInc::Shipping::Base.new
-        service.make_request
-        service.response.should_not be_blank
+        @service = AuctionInc::Shipping::Base.new
+        @response_string = File.read(remote_fixture_file('auction_inc_get_time_response.xml'))
+      end
+
+      it "should put the raw XML in raw_response" do
+        @service.make_request
+        @service.raw_response.should == @response_string
+      end
+
+      it "should pass the raw_response to Body.from_xml" do
+        AuctionInc::Shipping::Body.should_receive(:from_xml).with(@response_string)
+        @service.make_request
+      end
+
+      it "should set the response as a Body object" do
+        @service.make_request
+        @service.response.should be_a(AuctionInc::Shipping::Body)
       end
     end
   end
+
 end

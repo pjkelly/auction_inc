@@ -12,7 +12,7 @@ begin
     gem.authors = ["pjkelly"]
     gem.add_dependency "roxml", ">= 3.1.5"
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_development_dependency "fakeweb", ">=1.2.8"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

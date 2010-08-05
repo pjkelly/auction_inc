@@ -1,0 +1,29 @@
+<?xml version="2.1" encoding="utf-8" ?>
+<Envelope>
+  <Header>
+    <Date>2008-10-28 19:53:14 GMT</Date>
+  </Header>
+  <Body>
+    <ItemShipRate>
+      <Currency>USD</Currency>
+      <ShipRateList>
+        <ShipRate>
+          <Valid>1</Valid>
+          <CarrierCode>USPS</CarrierCode>
+          <ServiceCode>USPSPM</ServiceCode>
+          <ServiceName>PriorityMail</ServiceName>
+          <CalcMethod>C</CalcMethod>
+          <Rate>48.26</Rate>
+        </ShipRate>
+        <ShipRate>
+          <Valid>1</Valid>
+          <CarrierCode>UPS</CarrierCode>
+          <ServiceCode>UPSGND</ServiceCode>
+          <ServiceName>Ground</ServiceName>
+          <CalcMethod>C</CalcMethod>
+          <Rate>31.21</Rate>
+        </ShipRate>
+      </ShipRateList>
+    </ItemShipRate>
+  </Body>
+</Envelope>

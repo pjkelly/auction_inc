@@ -19,7 +19,7 @@ module AuctionInc
       xml_accessor :insurance
       xml_accessor :handling
       xml_accessor :ship_rate
-      xml_accessor :pkg_item, :as => [PkgItem]
+      xml_accessor :pkg_items, :as => [PkgItem]
     end
   end
 end

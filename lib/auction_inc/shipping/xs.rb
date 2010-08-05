@@ -6,7 +6,7 @@ module AuctionInc
       def request_xml
         doc = Nokogiri::XML::Document.new
         doc.root = self.envelope.to_xml
-        doc
+        doc.to_s
       end
 
       def envelope
@@ -26,10 +26,10 @@ module AuctionInc
         content.version = self.class.api_version
         content.detail_level = self.class.detail_level
         content.currency = self.currency
-        content.carrier_list = self.class.carriers
-        content.origin_address_list = origin_addresses unless origin_addresses.blank?
+        content.carriers = self.class.carriers
+        content.origin_addresses = origin_addresses unless origin_addresses.blank?
         content.destination_address = destination_address unless destination_address.blank?
-        content.item_list = items unless items.blank?
+        content.items = items unless items.blank?
         content
       end
     end

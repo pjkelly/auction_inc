@@ -19,7 +19,7 @@ module AuctionInc
       self.weight_unit = :lbs
       self.dimension_unit = :in
 
-      attr_accessor :response
+      attr_accessor :raw_response, :response
 
       def self.carriers
         @carriers ||= load_carriers
@@ -31,7 +31,7 @@ module AuctionInc
         carrier_data.each do |carrier|
           # TODO allow for PkgMaxWeight and OnDemand values
           services = carrier['services'].collect { |s| Service.new(:name => s['name'], :code => s['code'], :klass => s['klass']) }
-          result << Carrier.new(:name => carrier['name'], :code => carrier['code'], :entry_point => carrier['entry_point'], :service_list => services)
+          result << Carrier.new(:name => carrier['name'], :code => carrier['code'], :entry_point => carrier['entry_point'], :services => services)
         end
         result
       end
@@ -41,7 +41,7 @@ module AuctionInc
       end
 
       def self.services
-        self.carriers.collect { |carrier| carrier.service_list }.flatten
+        self.carriers.collect { |carrier| carrier.services }.flatten
       end
 
       def parsed_response
@@ -60,7 +60,8 @@ module AuctionInc
           http_request = Net::HTTP::Post.new(base_path)
           http_request.body = self.request_xml
 
-          self.response =  http_server.start { |http| http.request(http_request) }.body
+          self.raw_response =  http_server.start { |http| http.request(http_request) }.body
+          self.response = Body.from_xml(self.raw_response)
         rescue EOFError => e
           raise ConnectionError, "The remote server dropped the connection"
         rescue Errno::ECONNRESET => e
