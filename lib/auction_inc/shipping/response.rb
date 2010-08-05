@@ -26,6 +26,10 @@ module AuctionInc
           nil
         end
       end
+
+      def ship_rates
+        self.parsed.body.item_ship_rate.ship_rates if self.body.item_ship_rate.present?
+      end
     end
   end
 end

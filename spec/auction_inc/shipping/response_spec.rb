@@ -79,4 +79,13 @@ describe AuctionInc::Shipping::Response do
       end
     end
   end
+
+  describe "#ship_rates" do
+    let(:xml_string) { File.read(remote_fixture_file("auction_inc_detail_level_1_response.xml")) }
+    it "should be a shortcut to #body.item_ship_rate.ship_rates" do
+      response = AuctionInc::Shipping::Response.new(xml_string)
+      response.ship_rates.should == response.body.item_ship_rate.ship_rates
+    end
+  end
+
 end
