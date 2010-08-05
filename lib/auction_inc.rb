@@ -25,5 +25,6 @@ require 'auction_inc/shipping/node/item_ship_rate'
 require 'auction_inc/shipping/node/body'
 require 'auction_inc/shipping/node/envelope'
 
+require 'auction_inc/shipping/response'
 require 'auction_inc/shipping/base'
 require 'auction_inc/shipping/xs'

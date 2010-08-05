@@ -1,0 +1,28 @@
+<?xml version="2.1" encoding="utf-8" ?>
+<Envelope>
+  <Header>
+    <Date>2008-10-28 19:53:14 GMT</Date>
+  </Header>
+  <Body>
+    <ItemShipRate>
+      <Currency>USD</Currency>
+      <ShipRateList>
+        <ShipRate>
+          <Valid>False</Valid>
+          <CarrierCode>USPS</CarrierCode>
+          <ServiceCode>USPSPM</ServiceCode>
+          <ServiceName>PriorityMail</ServiceName>
+          <CalcMethod>C</CalcMethod>
+          <Rate></Rate>
+          <ErrorList>
+            <Error>
+              <Code>710</Code>
+              <Message>Item exceeds maximum weight</Message>
+              <Severity>NOTICE</Severity>
+            </Error>
+          </ErrorList>
+        </ShipRate>
+      </ShipRateList>
+    </ItemShipRate>
+  </Body>
+</Envelope>

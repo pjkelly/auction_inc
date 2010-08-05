@@ -75,21 +75,15 @@ describe AuctionInc::Shipping::Base do
         @response_string = File.read(remote_fixture_file('auction_inc_get_time_response.xml'))
       end
 
-      it "should put the raw XML in raw_response" do
-        @service.make_request
-        @service.raw_response.should == @response_string
-      end
-
-      it "should pass the raw_response to Body.from_xml" do
-        AuctionInc::Shipping::Body.should_receive(:from_xml).with(@response_string)
+      it "should pass the response string to Response.new" do
+        AuctionInc::Shipping::Response.should_receive(:new).with(@response_string)
         @service.make_request
       end
 
-      it "should set the response as a Body object" do
+      it "should set the response as a Response object" do
         @service.make_request
-        @service.response.should be_a(AuctionInc::Shipping::Body)
+        @service.response.should be_an(AuctionInc::Shipping::Response)
       end
     end
   end
-
 end

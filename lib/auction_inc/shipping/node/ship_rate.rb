@@ -2,7 +2,7 @@ module AuctionInc
   module Shipping
     class ShipRate < Node
       # Detail Level 1
-      xml_accessor :valid
+      xml_accessor :valid?
       xml_accessor :carrier_code
       xml_accessor :service_code
       xml_accessor :service_name

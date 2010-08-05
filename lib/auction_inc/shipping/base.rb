@@ -19,7 +19,7 @@ module AuctionInc
       self.weight_unit = :lbs
       self.dimension_unit = :in
 
-      attr_accessor :raw_response, :response
+      attr_accessor :response
 
       def self.carriers
         @carriers ||= load_carriers
@@ -60,8 +60,8 @@ module AuctionInc
           http_request = Net::HTTP::Post.new(base_path)
           http_request.body = self.request_xml
 
-          self.raw_response =  http_server.start { |http| http.request(http_request) }.body
-          self.response = Body.from_xml(self.raw_response)
+          response_string =  http_server.start { |http| http.request(http_request) }.body
+          self.response = Response.new(response_string)
         rescue EOFError => e
           raise ConnectionError, "The remote server dropped the connection"
         rescue Errno::ECONNRESET => e
