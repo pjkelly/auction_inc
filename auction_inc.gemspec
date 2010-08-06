@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{auction_inc}
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["pjkelly"]
-  s.date = %q{2010-08-05}
+  s.date = %q{2010-08-06}
   s.description = %q{Ruby wrapper around Auction Inc's shipping API.}
   s.email = %q{pj@crushlovely.com}
   s.extra_rdoc_files = [
