@@ -11,6 +11,7 @@ module AuctionInc
       xml_accessor :declared_value
       xml_accessor :pack_method
       xml_accessor :origin_code
+      xml_accessor :supp_handling_fee
     end
   end
 end
