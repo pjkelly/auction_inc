@@ -2,18 +2,18 @@
   code: FEDEX
   entry_point: R
   services:
-    # - name: First Overnight
-    #   code: FDXFO
-    #   klass: 1
-    # - name: Priority Overnight
-    #   code: FDXPO
-    #   klass: 1
-    # - name: Priority Overnight Saturday Delivery
-    #   code: FDXPOS
-    #   klass: 1
-    # - name: Standard Overnight
-    #   code: FDXSO
-    #   klass: 1
+    - name: First Overnight
+      code: FDXFO
+      klass: 1
+    - name: Priority Overnight
+      code: FDXPO
+      klass: 1
+    - name: Priority Overnight Saturday Delivery
+      code: FDXPOS
+      klass: 1
+    - name: Standard Overnight
+      code: FDXSO
+      klass: 1
     - name: Ground
       code: FDXGND
       klass: G
@@ -30,21 +30,21 @@
   code: UPS
   entry_point: P
   services:
-    # - name: Next Day Air
-    #   code: UPSNDA
-    #   klass: 1
-    # - name: Next Day Air Early AM
-    #   code: UPSNDE
-    #   klass: 1
-    # - name: Next Day Air Saturday Delivery
-    #   code: UPSNDAS
-    #   klass: 1
-    # - name: Next Day Air Saver
-    #   code: UPSNDS
-    #   klass: 1
-    # - name: 2 Day Air AM
-    #   code: UPS2DE
-    #   klass: 2
+    - name: Next Day Air
+      code: UPSNDA
+      klass: 1
+    - name: Next Day Air Early AM
+      code: UPSNDE
+      klass: 1
+    - name: Next Day Air Saturday Delivery
+      code: UPSNDAS
+      klass: 1
+    - name: Next Day Air Saver
+      code: UPSNDS
+      klass: 1
+    - name: 2 Day Air AM
+      code: UPS2DE
+      klass: 2
     - name: Ground
       code: UPSGND
       klass: G
