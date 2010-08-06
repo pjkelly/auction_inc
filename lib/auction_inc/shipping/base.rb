@@ -9,7 +9,7 @@ module AuctionInc
     class Base
       cattr_accessor :license_key, :base_url, :base_path, :carriers_yml, :api_version, :detail_level, :currency, :weight_unit, :dimension_unit
 
-      # self.license_key = 'ee2e0c20b21fe733c57dcc82e6d250ab'
+      self.license_key = nil
       self.base_url = 'api.auctioninc.com'
       self.base_path = '/websvc/shire'
       self.carriers_yml = File.join(File.dirname(__FILE__), 'carriers.yml')
