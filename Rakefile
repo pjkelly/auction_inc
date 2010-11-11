@@ -10,9 +10,9 @@ begin
     gem.email = "pj@crushlovely.com"
     gem.homepage = "http://github.com/pjkelly/auction_inc"
     gem.authors = ["pjkelly"]
-    gem.add_dependency "roxml", ">= 3.1.5"
-    gem.add_development_dependency "rspec", ">= 1.2.9"
-    gem.add_development_dependency "fakeweb", ">=1.2.8"
+    gem.add_dependency "roxml", "=3.1.5"
+    gem.add_development_dependency "rspec", "=1.2.9"
+    gem.add_development_dependency "fakeweb", "=1.2.8"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
